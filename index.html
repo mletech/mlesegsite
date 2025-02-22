@@ -1,78 +1,124 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Cybersecurity Website</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 20px;
-    }
-    h1 {
-      text-align: center;
-    }
-    section {
-      margin-bottom: 30px;
-    }
-    img {
-      max-width: 500px;
-      margin: 10px auto;
-      display: block;
-    }
-    pre {
-      background-color: #f0f0f0;
-      padding: 10px;
-      border-radius: 5px;
-      overflow-x: auto;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Basics</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 1rem auto;
+        }
+
+        code {
+            background-color: #f0f0f0;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        pre {
+            background-color: #f0f0f0;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #222;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Cybersecurity Essentials</h1>
+        <p>Protecting Your Digital World</p>
+    </header>
 
-  <h1>Welcome to the Cybersecurity Website</h1>
+    <main>
+        <section>
+            <h2>Understanding Threats</h2>
+            <img src="threats.jpg" alt="Cybersecurity Threats">
+            <p>Cyber threats come in many forms, including malware, phishing, and ransomware. Understanding these threats is the first step in protecting yourself.</p>
+        </section>
 
-  <section>
-    <h2>What is Cybersecurity?</h2>
-    <p>Cybersecurity is the practice of protecting computer systems and networks from digital attacks. These attacks can come in many forms, including malware, phishing, and ransomware.</p>
-    <img src="https://images.unsplash.com/photo-1555428528-95b18b2dd142?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80" alt="Cybersecurity concept image">
-  </section>
+        <section>
+            <h2>Password Security</h2>
+            <img src="password.jpg" alt="Password Security">
+            <p>Use strong, unique passwords for each of your accounts. Consider using a password manager to help you generate and store secure passwords.</p>
+            <p>Example of generating a strong password using Python:</p>
+            <pre><code>
+import secrets
+import string
 
-  <section>
-    <h2>Common Cybersecurity Threats</h2>
-    <ul>
-      <li>Malware</li>
-      <li>Phishing</li>
-      <li>Ransomware</li>
-      <li>Denial-of-service attacks</li>
-      <li>Data breaches</li>
-    </ul>
-  </section>
+def generate_password(length=12):
+    alphabet = string.ascii_letters + string.digits + string.punctuation
+    password = ''.join(secrets.choice(alphabet) for i in range(length))
+    return password
 
-  <section>
-    <h2>Cybersecurity Best Practices</h2>
-    <ol>
-      <li>Use strong passwords and change them regularly.</li>
-      <li>Be wary of suspicious emails and links.</li>
-      <li>Keep your software updated.</li>
-      <li>Back up your data regularly.</li>
-      <li>Use a VPN when connecting to public Wi-Fi.</li>
-    </ol>
-  </section>
+print(generate_password())
+            </code></pre>
+        </section>
 
-  <section>
-    <h2>Cybersecurity Code Example (Python)</h2>
-    <pre><code>
-import hashlib
+        <section>
+            <h2>Phishing Awareness</h2>
+            <img src="phishing.jpg" alt="Phishing Awareness">
+            <p>Phishing attacks attempt to trick you into revealing sensitive information. Be wary of suspicious emails and links.</p>
+            <p>Look for these signs:</p>
+            <ul>
+                <li>Generic greetings</li>
+                <li>Urgent or threatening language</li>
+                <li>Suspicious links or attachments</li>
+                <li>Requests for personal information</li>
+            </ul>
+        </section>
 
-def hash_password(password):
-  """Hash a password using SHA-256."""
-  return hashlib.sha256(password.encode('utf-8')).hexdigest()
+        <section>
+          <h2>Firewalls and Antivirus</h2>
+          <img src="firewall.jpg" alt="firewall and antivirus">
+          <p>A firewall monitors and controls network traffic, while antivirus software protects against malware. Both are essential for a secure system.</p>
+          <p>Ensure your firewall is enabled and your antivirus software is up-to-date.</p>
+        </section>
 
-# Example usage
-password = "my_secure_password"
-hashed_password = hash_password(password)
-print(hashed_password)
-    </code></pre>
-  </section>
+    </main>
 
+    <footer>
+        <p>&copy; 2024 Cybersecurity Basics</p>
+    </footer>
 </body>
 </html>
